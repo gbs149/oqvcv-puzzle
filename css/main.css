@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+.board {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-flow: row wrap;
+    
+    /*box-shadow: ;*/
+    
+    
+    /*width: 44rem*/
+}
+
+.tile {
+    flex: 0 0 auto;
+    
+    width: 25vw;
+    height: 33.333vh;
+    background: pink;
+    border: 1px solid black;
+    
+}
+
+.transparent {
+    width: 25vw;
+    height: 33.333vh;
+
+    background-color: transparent;
+    border: none
+    
+}
+
+
+/*classes para mover os tiles alterando a flex order*/
+.p1 {
+    order: 1;
+}
+.p2 {
+    order: 2;
+}
+.p3 {
+    order: 3;
+}
+.p4 {
+    order: 4;
+}
+.p5 {
+    order: 5;
+}
+.p6 {
+    order: 6;
+}
+.p7 {
+    order: 7;
+}
+.p8 {
+    order: 8;
+}
+.p9 {
+    order: 9;
+}
+.p10 {
+    order: 10;
+}
+.p11 {
+    order: 11;
+}
+.p12 {
+    order: 12;
+}
+
+
+.imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:-999;
+    
+    /*width: 100vw;*/
+    height: 100vh;
+    overflow: hidden;
+}
+
+img {
+    /*width: inherit;*/
+    height: inherit;
+}
