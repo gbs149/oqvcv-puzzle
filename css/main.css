@@ -10,8 +10,8 @@
     width: 100vw;
     height: 100vh;
     
-    display: flex;
-    flex-flow: row wrap;
+    /*display: flex;
+    flex-flow: row wrap;*/
     
     /*box-shadow: ;*/
     
@@ -20,7 +20,8 @@
 }
 
 .tile {
-    flex: 0 0 auto;
+    /*flex: 0 0 auto;*/
+    position: absolute;
     
     width: 25vw;
     height: 33.333vh;
@@ -39,42 +40,54 @@
 }
 
 
-/*classes para mover os tiles alterando a flex order*/
+/*classes para posicionar os tiles*/
 .p1 {
-    order: 1;
+    top: 0;
+    left: 0;
 }
 .p2 {
-    order: 2;
+    top: 0;
+    left: 25vw;
 }
 .p3 {
-    order: 3;
+    top: 0;
+    left: 50vw;
 }
 .p4 {
-    order: 4;
+    top: 0;
+    left: 75vw;
 }
 .p5 {
-    order: 5;
+    top: 33.333vh;
+    left: 0;
 }
 .p6 {
-    order: 6;
+    top: 33.333vh;
+    left: 25vw;
 }
 .p7 {
-    order: 7;
+    top: 33.333vh;
+    left: 50vw;
 }
 .p8 {
-    order: 8;
+    top: 33.333vh;
+    left: 75vw;
 }
 .p9 {
-    order: 9;
+    top: 66.666vh;
+    left: 0;
 }
 .p10 {
-    order: 10;
+    top: 66.666vh;
+    left: 25vw;
 }
 .p11 {
-    order: 11;
+    top: 66.666vh;
+    left: 50vw;
 }
 .p12 {
-    order: 12;
+    top: 66.666vh;
+    left: 75vw;
 }
 
 
