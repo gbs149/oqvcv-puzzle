@@ -1,7 +1,7 @@
 $(document).ready(function () {
     "use strict";
 
-    var width = 4;
+    var colunas = 4;
     var tileWidth = "25vw";
     var tileHeight = "33.333vh"
 
@@ -12,8 +12,9 @@ $(document).ready(function () {
         var position = Number(dataPosition);
         var dataEmptyPosition = $("#empty").attr("data-pos");
         var emptyPos = Number(dataEmptyPosition);
-        var line = Math.ceil(position / width);
-        var emptyLine = Math.ceil(emptyPos / width);
+        var line = Math.ceil(position / colunas);
+        var emptyLine = Math.ceil(emptyPos / colunas);
+        
         var animateOptions = {
             duration: 200,
             start: function () {
@@ -38,14 +39,14 @@ $(document).ready(function () {
             $("#empty").attr("data-pos", position);
         }
 
-        if (position + width === emptyPos) {
+        if (position + colunas === emptyPos) {
             $(this).animate({ "top": "+=" + tileHeight }, animateOptions)
             $('#empty').animate({ "top": "-=" + tileHeight }, animateOptions);
             $(this).attr("data-pos", emptyPos);
             $("#empty").attr("data-pos", position);
         }
 
-        if (position - width === emptyPos) {
+        if (position - colunas === emptyPos) {
             $(this).animate({ "top": "-=" + tileHeight }, animateOptions)
             $('#empty').animate({ "top": "+=" + tileHeight }, animateOptions);
             $(this).attr("data-pos", emptyPos);

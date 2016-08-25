@@ -3,40 +3,29 @@
 }
 
 .board {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background: url('../img/2013.jpg') no-repeat;
+    background-size: cover;
 
-    width: 100vw;
     height: 100vh;
-    
-    /*display: flex;
-    flex-flow: row wrap;*/
-    
-    /*box-shadow: ;*/
-    
-    
-    /*width: 44rem*/
+    width: 100vw;
 }
 
 .tile {
-    /*flex: 0 0 auto;*/
     position: absolute;
     
-    width: 25vw;
-    height: 33.333vh;
+    width: 25%;
+    height: 33.3333%;
+
     background: pink;
     border: 1px solid black;
-    
 }
 
 .transparent {
-    width: 25vw;
-    height: 33.333vh;
+    width: 25%;
+    height: 33.333%;
 
     background-color: transparent;
-    border: none
-    
+    border: none;
 }
 
 
@@ -47,62 +36,45 @@
 }
 .p2 {
     top: 0;
-    left: 25vw;
+    left: 25%;
 }
 .p3 {
     top: 0;
-    left: 50vw;
+    left: 50%;
 }
 .p4 {
     top: 0;
-    left: 75vw;
+    left: 75%;
 }
 .p5 {
-    top: 33.333vh;
+    top: 33.3333%;
     left: 0;
 }
 .p6 {
-    top: 33.333vh;
-    left: 25vw;
+    top: 33.3333%;
+    left: 25%;
 }
 .p7 {
-    top: 33.333vh;
-    left: 50vw;
+    top: 33.3333%;
+    left: 50%;
 }
 .p8 {
-    top: 33.333vh;
-    left: 75vw;
+    top: 33.3333%;
+    left: 75%;
 }
 .p9 {
-    top: 66.666vh;
+    top: 66.6666%;
     left: 0;
 }
 .p10 {
-    top: 66.666vh;
-    left: 25vw;
+    top: 66.6666%;
+    left: 25%;
 }
 .p11 {
-    top: 66.666vh;
-    left: 50vw;
+    top: 66.6666%;
+    left: 50%;
 }
 .p12 {
-    top: 66.666vh;
-    left: 75vw;
-}
-
-
-.imagem {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index:-999;
-    
-    /*width: 100vw;*/
-    height: 100vh;
-    overflow: hidden;
-}
-
-img {
-    /*width: inherit;*/
-    height: inherit;
+    top: 66.6666%;
+    left: 75%;
 }
