@@ -6,23 +6,23 @@
     background: url('../img/2013.jpg') no-repeat;
     background-size: cover;
 
-    height: 100vh;
-    width: 100vw;
+    height: 1080px;
+    width: 1920px;
 }
 
 .tile {
     position: absolute;
     
-    width: 25%;
-    height: 33.3333%;
+    width: 480px;
+    height: 360px;
 
     background: pink;
     border: 1px solid black;
 }
 
 .transparent {
-    width: 25%;
-    height: 33.333%;
+    width: 480px;
+    height: 360px;
 
     background-color: transparent;
     border: none;
@@ -36,45 +36,73 @@
 }
 .p2 {
     top: 0;
-    left: 25%;
+    left: 480px;
 }
 .p3 {
     top: 0;
-    left: 50%;
+    left: 960px;
 }
 .p4 {
     top: 0;
-    left: 75%;
+    left: 1440px;
 }
 .p5 {
-    top: 33.3333%;
+    top: 360px;
     left: 0;
 }
 .p6 {
-    top: 33.3333%;
-    left: 25%;
+    top: 360px;
+    left: 480px;
 }
 .p7 {
-    top: 33.3333%;
-    left: 50%;
+    top: 360px;
+    left: 960px;
 }
 .p8 {
-    top: 33.3333%;
-    left: 75%;
+    top: 360px;
+    left: 1440px;
 }
 .p9 {
-    top: 66.6666%;
+    top: 720px;
     left: 0;
 }
 .p10 {
-    top: 66.6666%;
-    left: 25%;
+    top: 720px;
+    left: 480px;
 }
 .p11 {
-    top: 66.6666%;
-    left: 50%;
+    top: 720px;
+    left: 960px;
 }
 .p12 {
-    top: 66.6666%;
-    left: 75%;
+    top: 720px;
+    left: 1440px;
 }
+
+
+/* fullscreen overlay */
+
+/*#fullscreen-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#enter-fullscreen {
+    font-size: 2em;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}*/
