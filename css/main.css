@@ -3,11 +3,13 @@
 }
 
 .board {
-    background: url('../img/2013.jpg') no-repeat;
+    background: url('../img/puzzle.jpg') no-repeat;
     background-size: cover;
 
     height: 1080px;
     width: 1920px;
+
+    z-index: -2;
 }
 
 .tile {
@@ -18,6 +20,8 @@
 
     background: pink;
     border: 1px solid black;
+
+    z-index: 1;
 }
 
 .transparent {
@@ -78,6 +82,32 @@
     top: 720px;
     left: 1440px;
 }
+
+/* VINHETAS */
+.vinhetas-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+}
+
+.vinheta {
+
+    width: 480px;
+    height: 360px;
+
+    flex: 0 0 auto;
+
+    background-image: radial-gradient( ellipse, transparent 0%, #000 75%);
+}
+
 
 
 /* fullscreen overlay */
