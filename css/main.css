@@ -3,14 +3,13 @@
 }
 
 .board {
-    background: url('../img/puzzle.jpg') no-repeat;
+    background: url('../img/puzzle_1920x1080.jpg') no-repeat;
     background-size: cover;
 
     height: 1080px;
     width: 1920px;
-
-    z-index: -2;
 }
+
 
 .tile {
     position: absolute;
@@ -18,19 +17,50 @@
     width: 480px;
     height: 360px;
 
-    background: pink;
-    border: 1px solid black;
-
-    z-index: 1;
+    background: url("../img/card_bg.png") no-repeat;
+    background-size: 100% 100%;
 }
 
+/*
+.tile::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/card_icon.png") no-repeat;
+    background-position: center center;
+    content: "";
+    opacity: 0.15;
+}
+*/
+
 .transparent {
+    position: absolute;
+    
     width: 480px;
     height: 360px;
 
     background-color: transparent;
     border: none;
 }
+
+
+/* VINHETAS */
+
+.tunnel-tile {
+    position: absolute;
+    
+    width: 480px;
+    height: 360px;
+	/*float: left;*/
+
+    background-image: radial-gradient( ellipse, transparent 50%, #000 90%);
+    /*background: url("../img/card_tunnel.png") no-repeat;
+    background-size: 100% 100%;*/
+}
+
 
 
 /*classes para posicionar os tiles*/
@@ -82,57 +112,3 @@
     top: 720px;
     left: 1440px;
 }
-
-/* VINHETAS */
-.vinhetas-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    flex-flow: row wrap;
-
-    width: 100%;
-    height: 100%;
-
-    z-index: -1;
-}
-
-.vinheta {
-
-    width: 480px;
-    height: 360px;
-
-    flex: 0 0 auto;
-
-    background-image: radial-gradient( ellipse, transparent 0%, #000 75%);
-}
-
-
-
-/* fullscreen overlay */
-
-/*#fullscreen-msg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    height: 100%;
-    width: 100%;
-
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#enter-fullscreen {
-    font-size: 2em;
-}
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}*/

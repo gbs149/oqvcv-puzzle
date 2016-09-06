@@ -7,8 +7,6 @@ $(document).ready(function () {
 
     $(".tile").on("click touchmove", move);
 
-    /*$("#enter-fullscreen").on("click", enterFullScreen);*/
-
     function move() {
         var dataPosition = $(this).attr("data-pos");
         var position = Number(dataPosition);
@@ -16,7 +14,7 @@ $(document).ready(function () {
         var emptyPos = Number(dataEmptyPosition);
         var line = Math.ceil(position / colunas);
         var emptyLine = Math.ceil(emptyPos / colunas);
-
+        
         var animateOptions = {
             duration: 200,
             start: function () {
@@ -67,24 +65,6 @@ $(document).ready(function () {
         var audio = document.getElementById(id);
         audio.pause();
     };
-
-    /*function enterFullScreen() {
-        $("#fullscreen-msg").addClass("hidden");
-
-        var docElm = document.documentElement;
-        if (docElm.requestFullscreen) {
-            docElm.requestFullscreen();
-        }
-        else if (docElm.mozRequestFullScreen) {
-            docElm.mozRequestFullScreen();
-        }
-        else if (docElm.webkitRequestFullScreen) {
-            docElm.webkitRequestFullScreen();
-        }
-        else if (docElm.msRequestFullscreen) {
-            docElm.msRequestFullscreen();
-        }
-    }*/
 });
 
 
