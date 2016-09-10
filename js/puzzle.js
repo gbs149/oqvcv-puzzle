@@ -80,5 +80,27 @@ $(document).ready(function () {
     function pauseAudio(id) {
         var audio = document.getElementById(id);
         audio.pause();
-    };
+    }
+
+
+    $("#enter-fullscreen").on("click", enterFullScreen);
+
+    function enterFullScreen() {
+        $("#fullscreen-msg").addClass("hidden");
+
+        var docElm = document.documentElement;
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        }
+        else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        }
+        else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        }
+        else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+    }
+
 });
