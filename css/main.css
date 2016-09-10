@@ -21,20 +21,6 @@
     background-size: 100% 100%;
 }
 
-/*
-.tile::after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url("../img/card_icon.png") no-repeat;
-    background-position: center center;
-    content: "";
-    opacity: 0.15;
-}
-*/
 
 .transparent {
     position: absolute;
@@ -54,11 +40,8 @@
     
     width: 480px;
     height: 360px;
-	/*float: left;*/
 
     background-image: radial-gradient( ellipse, transparent 50%, #000 90%);
-    /*background: url("../img/card_tunnel.png") no-repeat;
-    background-size: 100% 100%;*/
 }
 
 

@@ -12,7 +12,6 @@ $(document).ready(function () {
 
     function clickHandler() {
         move($(this));
-        // $(this).off();
         clearTimeout(timer);
         console.log(emptyPosition);
         timer = setTimeout(function () {
@@ -23,7 +22,6 @@ $(document).ready(function () {
     function move($obj) {
         var $empty = $("#empty");
         var position = Number($obj.attr("data-pos"));
-        // var emptyPosition = Number($empty.attr("data-pos"));
         var line = Math.ceil(position / colunas);
         var emptyLine = Math.ceil(emptyPosition / colunas);
         
@@ -41,28 +39,24 @@ $(document).ready(function () {
 
         if (position + 1 === emptyPosition && line === emptyLine) {
             $obj.animate({ "left": "+=" + tileWidth }, animateOptions)
-            // $empty.animate({ "left": "-=" + tileWidth }, animateOptions);
             $obj.attr("data-pos", emptyPosition);
             emptyPosition = position;
         }
 
         if (position - 1 === emptyPosition && line === emptyLine) {
             $obj.animate({ "left": "-=" + tileWidth }, animateOptions)
-            // $empty.animate({ "left": "+=" + tileWidth }, animateOptions);
             $obj.attr("data-pos", emptyPosition);
             emptyPosition = position;
         }
 
         if (position + colunas === emptyPosition) {
             $obj.animate({ "top": "+=" + tileHeight }, animateOptions)
-            // $empty.animate({ "top": "-=" + tileHeight }, animateOptions);
             $obj.attr("data-pos", emptyPosition);
             emptyPosition = position;
         }
 
         if (position - colunas === emptyPosition) {
             $obj.animate({ "top": "-=" + tileHeight }, animateOptions)
-            // $empty.animate({ "top": "+=" + tileHeight }, animateOptions);
             $obj.attr("data-pos", emptyPosition);
             emptyPosition = position;
         }
