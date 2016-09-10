@@ -5,10 +5,11 @@ $(document).ready(function () {
     var tileWidth = "480px";
     var tileHeight = "360px";
     var emptyPosition = 8; // posição inicial
+    var $tiles = $(".tile");
 
     var timer; // timer para recarregar a página
 
-    $(".tile").on("click", clickHandler);
+    $tiles.on("click", clickHandler);
 
     function clickHandler() {
         move($(this));
@@ -31,12 +32,12 @@ $(document).ready(function () {
         var animateOptions = {
             duration: 600,
             start: function () {
-                $obj.off("click", clickHandler);
+                $tiles.off("click", clickHandler);
                 pauseAudio(emptyPosition);
             },
             complete: function () {
                 playAudio(position);
-                $obj.on("click", clickHandler);
+                $tiles.on("click", clickHandler);
             }
         };
 
