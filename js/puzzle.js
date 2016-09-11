@@ -18,9 +18,7 @@ $(document).ready(function () {
         clearTimeout(timer);
 
         // em X minutos sem atividade, recarrega a página
-        timer = setTimeout(function () {
-            window.location.reload();
-        }, 5 * 60000);
+        timer = setTimeout(resetGame, 120 * 1000);
     }
 
     // função que move as peças e aciona o áudio ao final da animação
@@ -80,6 +78,23 @@ $(document).ready(function () {
     function pauseAudio(id) {
         var audio = document.getElementById(id);
         audio.pause();
+    }
+
+    function resetGame() {
+            var emptyLine, emptyColumn; // base 0
+            var emptyLeft, emptyTop; // posição relativa, em px
+            
+            emptyLine = Math.ceil(emptyPosition / colunas) - 1;
+            emptyColumn = ( emptyPosition - 1 ) % colunas;
+
+            emptyLeft = 480 * emptyColumn;
+            emptyTop = 360 * emptyLine;
+
+            var positionToMoveTo = {top: emptyTop, left: emptyLeft};
+
+            $('[data-pos="8"]').attr("data-pos", emptyPosition).css( positionToMoveTo );
+            
+            emptyPosition = 8;
     }
 
 
