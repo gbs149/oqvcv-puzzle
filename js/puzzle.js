@@ -4,7 +4,7 @@ $(document).ready(function () {
     var colunas = 4;
     var tileWidth = "480px";
     var tileHeight = "360px";
-    var emptyPosition = 8; // posição inicial
+    var emptyPosition = 2; // posição inicial
     var $tiles = $(".tile");
 
     var timer; // timer para recarregar a página
@@ -94,7 +94,7 @@ $(document).ready(function () {
 
             $('[data-pos="8"]').attr("data-pos", emptyPosition).css( positionToMoveTo );
             
-            emptyPosition = 8;
+            emptyPosition = 2;
     }
 
 
